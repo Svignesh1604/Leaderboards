@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-buttons button {
+  background-color: #00a54f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-buttons .login-btn {
+  background-color: transparent;
+  color: #00a54f;
+  border: 2px solid #00a54f;
+}
+
+.leaderboard {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1200px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-header h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+
+.top-profiles {
+  display: flex;
+  justify-content: space-between; /* Even spacing between profiles */
+  margin: 50px auto;
+  max-width: 1200px;
+  background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual profile styling */
+.profile {
+  position: relative;
+  width: 30%; /* Ensures each profile takes up 30% of the width */
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 10px; /* Creates limited gap between profiles */
+}
+.profile1 {
+  position: relative;
+  width: 30%; /* Ensures each profile takes up 30% of the width */
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 10px; /* Creates limited gap between profiles */
+}
+
+.profile:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+.profile1:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+.profile-rank {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffdd00;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.profile-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #cad3c8;
+  transition: border-color 0.3s ease;
+}
+
+.profile:hover .profile-image img {
+  border-color: #4cd137;
+}
+
+.profile-middle:hover .profile-middle-image img {
+  border-color: #4cd137;
+}
+
+.profile1-rank {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffdd00;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile1-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #cad3c8;
+  transition: border-color 0.3s ease;
+}
+
+.profile1:hover .profile1-image img {
+  border-color: #4cd137;
+}
+
+.profile-info h2 {
+  margin: 10px 0;
+  font-size: 22px;
+  color: #2980b9;
+  font-weight: bold;
+}
+
+.profile-info p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #636e72;
+}
+
+.points {
+  font-size: 20px;
+  font-weight: bold;
+  color:lightseagreen;
+}
+
+.profile-info a {
+  background-color: #2980b9;
+  color: white;
+  padding: 5px 9px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.profile-info a:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+
+.trophy img {
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.profile1:hover .trophy img {
+  transform: scale(1.1);
+}
+
+.middle {
+  transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.leaderboard-table thead th {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.leaderboard-table tbody td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.leaderboard-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.leaderboard-table tbody td img {
+  vertical-align: middle;
+}
+
+.leaderboard-table tbody td span {
+  vertical-align: middle;
+  font-size: 14px;
+  color: #333;
+}
+
+.highlight {
+  background-color: #ffeaa7;
+}
+
+.highlight:hover {
+  background-color: #fdcb6e;
+}
+
+.leaderboard-table tbody tr:hover {
+  background-color: #dfe6e9;
+}
+
+.leaderboard-table tbody tr td:last-child {
+  text-align: right;
+  font-weight: bold;
+  color: #28a745;
+}
+
+/* Default Styles for Desktop (No changes here) */
+
+/* Media Query for Tablets (768px - 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .logo img {
+      height: 30px;
+  }
+
+  .nav-buttons {
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .leaderboard {
+      width: 95%;
+      padding: 10px;
+  }
+
+  .top-profiles {
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 10px;
+  }
+
+  .profile {
+      width: 45%;
+      padding: 10px;
+  }
+
+  .profile1 {
+      width: 45%;
+      padding: 10px;
+  }
+
+  .leaderboard-table {
+      font-size: 14px;
+  }
+
+  .leaderboard-table thead th {
+      padding: 8px;
+  }
+
+  .leaderboard-table tbody td {
+      padding: 8px;
+  }
+}
+
+/* Media Query for Mobile Phones (320px - 767px) */
+@media only screen and (max-width: 767px) {
+  .navbar {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .logo img {
+      height: 30px;
+  }
+
+  .nav-buttons {
+      flex-direction: column;
+      margin-top: 10px;
+  }
+
+  .leaderboard {
+      width: 100%;
+      padding: 5px;
+  }
+
+  .top-profiles {
+      flex-direction: column;
+      padding: 0;
+  }
+
+  .profile, .profile1 {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .profile-image img {
+      width: 80px;
+      height: 80px;
+  }
+
+  .profile-info h2 {
+      font-size: 18px;
+  }
+
+  .profile-info p {
+      font-size: 14px;
+  }
+
+  .leaderboard-table {
+      font-size: 12px;
+  }
+
+  .leaderboard-table thead th {
+      font-size: 14px;
+      padding: 6px;
+  }
+
+  .leaderboard-table tbody td {
+      padding: 5px;
+  }
+
+  .profile-pic {
+      width: 40px;
+      height: 40px;
+  }
+
+  .profile-info a {
+      padding: 5px;
+      font-size: 12px;
+  }
+
+  .trophy img {
+      width: 25px;
+  }
+}
